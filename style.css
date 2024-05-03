@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&display=swap');
+:root{
+    --dark-cyan: hsl(158, 36%, 37%);
+    --cream: hsl(30, 38%, 92%);
+    --very-dark-blue: hsl(212, 21%, 14%);
+    --dark-grayish-blue: hsl(228, 12%, 48%);
+    --white: hsl(0, 0%, 100%);
+
+    --font-body: "Montserrat", sans-serif;
+    --font-headings:"Fraunces", serif;
+}
+
+
+*,*::after,*::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+}
+ul{
+    list-style: none;
+}
+
+body{
+    font-family: var(--font-body);
+    background-color: var(--cream);
+}
+
+.container{
+    margin: 30px 15px;
+    background-color: var(--white);
+    border-radius: 15px;
+    
+}
+.image{
+    background-image: url('/images/image-product-mobile.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    min-height: 280px;
+    min-width: 300px;
+    border-radius: 15px 15px 0  0;
+}
+
+.texto{
+    padding: 25px 20px;
+}
+
+.container .perfume{
+    text-transform: uppercase;
+    color: var(--dark-grayish-blue);
+    font-weight: 500;
+    opacity: 0.8;
+    font-size: 15px;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+.texto h1{
+    font-family: var(--font-headings);
+    line-height: 1;
+    margin-bottom: 20px;
+}
+.texto p{
+    color: var(--dark-grayish-blue);
+    line-height: 1.5;
+    font-weight: 600;
+    opacity: 0.7;
+    margin-bottom: 20px;
+}
+
+.texto .precio span{
+    opacity: 0.9;
+    text-decoration: line-through;
+    color: var(--dark-grayish-blue);
+    font-weight:normal;
+    font-size: 1rem;
+}
+.texto .precio {
+    opacity: 1;
+    font-weight: bold;
+    font-family: var(--font-headings);
+    font-size: 2.2rem;
+    color: var(--dark-cyan);
+    margin-right: 30px;
+}
+
+.btn a i{
+    font-size: 1.2rem;
+    margin-right: 20px;
+    color: var(--white);
+}
+.btn{
+    width: 100%;
+    padding: 18px 25px;
+    border-radius: 8px;
+    border: none;
+    background-color: var(--dark-cyan);
+    color: var(--white);
+    font-weight: bold;
+    text-align: center;
+    cursor: pointer;
+}
+
+.btn:hover{
+    background-color: hsl(157, 34%, 26%);
+    transition: 1s;
+}
+
+@media (min-width: 640px) {
+    body{
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+  .container{
+    max-width: 600px;
+    display: flex;
+  }
+  .image{
+    border-radius: 15px 0 0 15px;
+    background-image: url(/images/image-product-desktop.jpg);
+  }
+}
+
+
